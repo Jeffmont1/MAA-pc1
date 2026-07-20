@@ -5,9 +5,19 @@ import matplotlib.pyplot as plt
 # Configuración de la página
 st.set_page_config(page_title="Simulador MAA - UTP", layout="wide")
 
-st.title("Simulador de Movimiento Armónico Amortiguado")
+st.title("Simulador de ejercicio tipo sobre Movimiento Armónico Amortiguado")
 st.markdown("---")
+st.markdown("""
+### Ejercicio de Tipo:
+**Enunciado:** El oscilador representado en la figura posee una masa de 2 kg, una constante elástica $k = 8\\text{ N/m}$ y una constante de amortiguamiento $c = 1\\text{ N}\\cdot\\text{s/m}$. En el instante $t = 0$, la masa se libera del reposo en la posición $x = 0.1\\text{ m}$.
 
+**Se requiere:**
+1. Establecer una ecuación que describa la posición de la masa en función del tiempo.
+2. Calcular el periodo y la frecuencia natural del sistema.
+3. Determinar el periodo y la frecuencia central en ausencia de amortiguamiento.
+4. Generar una gráfica que represente el movimiento oscilatorio.
+""")
+st.markdown("---")
 # Barra lateral para ingreso de datos
 st.sidebar.header("Parámetros del Sistema")
 m = st.sidebar.number_input("Masa m (kg)", value=2.0, min_value=0.1)
