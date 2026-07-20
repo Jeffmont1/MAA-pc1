@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 # Configuración de la página
 st.set_page_config(page_title="Simulador MAA - UTP", layout="wide")
 
-st.title("🧪 Simulador de Movimiento Armónico Amortiguado")
+st.title("Simulador de Movimiento Armónico Amortiguado")
 st.markdown("---")
 
 # Barra lateral para ingreso de datos
@@ -28,13 +28,13 @@ f_ideal = 1 / T_ideal
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("📊 Análisis de Frecuencias")
+    st.subheader("Análisis de Frecuencias")
     st.write(f"**Frecuencia natural (w0):** {w0:.4f} rad/s")
     st.write(f"**Factor gamma:** {gamma:.4f}")
     st.info(f"**Periodo Ideal (T0):** {T_ideal:.4f} s | **Frecuencia:** {f_ideal:.4f} Hz")
 
 with col2:
-    st.subheader("📝 Ecuaciones del Movimiento")
+    st.subheader("Ecuaciones del Movimiento")
     if gamma < w0:
         tipo = "Subamortiguado"
         w_d = np.sqrt(w0**2 - gamma**2)
